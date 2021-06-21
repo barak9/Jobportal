@@ -1,0 +1,177 @@
+
+<style>
+
+body{
+  font-family: 'Nunito', sans-serif;
+  padding: 10px;
+  
+
+  
+}
+.a{
+    font-size: 14px;
+}
+.card{
+    border-radius: 4px;
+     
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+     
+  padding: 14px 80px 18px 36px;
+  
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button {
+  background-color: #f80404;
+  border: none;
+  color: white;
+  padding: 9px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 18px;
+font-family: Verdana, sans-serif;
+
+}
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/singlelist">
+      <img
+        src="/images/login.png"
+        height="50"
+        alt=""
+        loading="lazy"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Jobs</a>
+        <a class="nav-link" href="#">Recuriters</a>
+        <a class="nav-link" href="#">Services</a>
+        <a class="nav-link" href="#">About</a
+        >
+      <!-- Left links -->
+    
+      <div style="margin-left:220px;"></div>
+        <a class="btn btn-secondary" href="/addOrEdit"><i class="fa fa-plus"></i> Create New JOB</a> 
+ 
+ 
+        <a
+          class="btn px-3"
+          href=""
+          role="button"
+          > <i class="fas fa-bell"></i>
+         </a>
+    </div>
+
+    </div>
+      <div style="margin-left:40px;"></div>
+<div class="dropdown">
+  <button class="dropbtn">Login</button>
+  <div class="dropdown-content">
+    <a href="/login">Candidate Login</a>
+    <a href="/employerlogin">Employer Login</a>
+  
+  </div>
+</div>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<div class="dropdown">
+  <button class="dropbtn">Sign Up</button>
+  <div class="dropdown-content">
+    <a href="/register">Candidate SignUp</a>
+    <a href="/employerdetails">Employer SignUp</a>
+   
+  </div>
+</div>
+
+<div style="margin-left:50px;"></div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
+<!-- Section: Condition -->
+<br/>
+<div class= "row">
+   
+    <div class ="col-sm-2">
+<h3><a class="btn btn-secondary" href="/addOrEdit"><i class="fa fa-plus"></i> Create New</a></h3>
+
+</div>
+<div class ="col-sm-2"></div>
+<div class ="col-sm-2">
+    
+</div>
+<div class ="col-sm-1">
+    <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+    </div>
+<div class="col-sm-2"></div>
+<div class ="col-sm-1">
+<form action ="/logout" method="POST"><button class="btn btn-danger"> <i class="fas fa-sign-out-alt"></i></span>Logout</button>
+
+        </form>
+</div>
+</div>
+<br>
+<br>
+
+             {{#each singlelist}}
+ 
+        <div class="card">
+  <div class="card-body">
+    <h5 class="card-title" style="line-height: 0.6">{{this.fullName}}</h5>
+
+    <p class="card-text" style="color:black">{{this.company}}</p>
+    <div class="a">
+    <a href="#" style="color:black" class="card-link"><i style = "color:rgb(93, 92, 92);" class="fas fa-briefcase fa-md" aria-hidden="true">&nbsp;</i></i>{{this.experinace}}</a>
+    <a href="#" style="color:black" class="card-link"><i style = "color:rgb(88, 86, 86);" class="fas fa-rupee-sign fa-md" aria-hidden="true">&nbsp;</i>{{this.salary}}</a>
+    <a href="#" style="color:black" class="card-link"><i style = "color:rgb(92, 89, 89);" class="fas fa-mobile fa-md" aria-hidden="true">&nbsp;</i>{{this.mobile}}</a>
+    
+    <a href="#" style="color:black" style="color:black" class="card-link"><i style = "color:rgb(71, 69, 69);" class="fas fa-map-marker-alt fa-md" aria-hidden="true">&nbsp;</i>{{this.location}}</a>
+    <br>
+
+    <i style = "color:black;" class="far fa-file-alt fa-md" aria-hidden="true">&nbsp;&nbsp;</i>{{this.comment}}
+  </div></div>
+</div class="card-body">
+<div class="card-body"></div>
+<div>
+
+ {{/each}}
+</div>
+        
+        
+ </div>

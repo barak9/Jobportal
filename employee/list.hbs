@@ -1,0 +1,207 @@
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript">
+import TimeAgo from 'javascript-time-ago'
+</script>
+
+<script>
+  var moment = require('moment');
+</script>
+<style>
+
+body{
+  font-family: 'Nunito', sans-serif;
+  padding: 10px;
+  
+
+  
+}
+.a{
+    font-size: 14px;
+}
+.card{
+    border-radius: 4px;
+     
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+     
+  padding: 14px 80px 18px 36px;
+  
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button {
+  background-color: #f80404;
+  border: none;
+  color: white;
+  padding: 9px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 18px;
+font-family: Verdana, sans-serif;
+
+}
+</style>
+<body>
+<div class= "row">
+   
+    <div class ="col-sm-2">
+<h3><a class="btn btn-secondary" href="/addOrEdit"><i class="fa fa-plus"></i> Create New</a></h3>
+
+</div>
+<div class ="col-sm-2"></div>
+<div class ="col-sm-2">
+    
+</div>
+<div class ="col-sm-1">
+    <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>
+    </div>
+<div class="col-sm-2"></div>
+<div class ="col-sm-1">
+<form action ="/logout" method="POST"><button class="btn btn-danger"> <i class="fas fa-sign-out-alt"></i></span>Logout</button>
+
+        </form>
+</div>
+</div>
+<br>
+<br>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Job Name</th>
+            <th>Email</th>
+             <th>company</th>
+              <th>Experinace</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th>Job Location</th>
+            <th>Salary</th>
+            <th></th>
+            
+        </tr>
+    </thead>
+    <tbody>
+     
+        {{#each list}}
+        
+
+
+
+        <div>
+        <tr>
+           
+
+    
+
+<!-- container for Moment.js output -->
+
+
+
+
+
+
+            </td>
+           
+
+    
+
+<!-- container for Moment.js output -->
+
+
+
+<script type="text/javascript">
+(function()
+{
+  // instantiate a moment object
+  var NowMoment = moment();
+  
+  // instantiate a JavaScript Date object
+  var NowDate = new Date();
+  
+  // display value of moment object in #displayMoment div
+  var eDisplayMoment = document.getElementById('displayMoment');
+  eDisplayMoment.innerHTML = moment([2021, 0, 28).fromNow();
+  
+
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+              <td>{{this.fullName}}</td>
+             <td>{{this.email}}</td>
+            <td>{{this.company}}</td>
+            <td>{{this.experinace}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td>{{this.location}}</td>
+             <td>{{this.salary}}</td>
+           <td></td> 
+             
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fas fa-edit fa-lg" aria-hidden="true"></i></a>
+                <a href="/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+            
+        </tr>
+</div>
+        <div class="card">
+  <div class="card-body">
+    <h5 class="card-title" style="line-height: 0.6">{{this.fullName}}</h5>
+
+    <p class="card-text" style="color:black">{{this.company}}</p>
+    <div class="a">
+    <a href="#" style="color:black" class="card-link"><i style = "color:rgb(93, 92, 92);" class="fas fa-briefcase fa-md" aria-hidden="true">&nbsp;</i></i>{{this.experinace}}</a>
+    <a href="#" style="color:black" class="card-link"><i style = "color:rgb(88, 86, 86);" class="fas fa-rupee-sign fa-md" aria-hidden="true">&nbsp;</i>{{this.salary}}</a>
+    <a href="#" style="color:black" class="card-link"><i style = "color:rgb(92, 89, 89);" class="fas fa-mobile fa-md" aria-hidden="true">&nbsp;</i>{{this.mobile}}</a>
+    
+    <a href="#" style="color:black" style="color:black" class="card-link"><i style = "color:rgb(71, 69, 69);" class="fas fa-map-marker-alt fa-md" aria-hidden="true">&nbsp;</i>{{this.location}}</a>
+    <br>
+
+    <br>
+ <i style = "color:black;" class="far fa-file-alt fa-md" aria-hidden="true">&nbsp;&nbsp;</i>{{this.comment}}
+  <br>
+ <i style = "color:black;" class="far fa-clock fa-md" aria-hidden="true">&nbsp;&nbsp;</i>{{this.time}}
+<br><br>
+  
+  
+  </div></div>
+</div class="card-body">
+<div class="card-body"></div>
+<div>
+
+
+</div>
+        
+        {{/each}}
+    </tbody></body>
+</table></div>

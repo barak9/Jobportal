@@ -1,0 +1,343 @@
+   <style>
+      @media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  body, .container, .right {
+    width: 100%;
+  }
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: DodgerBlue;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 100px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+p{
+    color: rgb(5, 5, 5);
+
+
+}
+
+
+
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+
+  background-repeat: no-repeat;
+    background-size: cover;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  margin-left:2px;
+  font-size: 16px;
+
+
+}
+h3{
+text-align: center;
+}
+.container{
+  max-width:1045px;
+  
+
+  
+display:block;
+
+}
+
+
+.brand{
+  text-align: center;
+}
+
+.brand span{
+  color:#fff;
+}
+
+
+
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:5px;
+}
+
+.contact{
+  
+}
+
+/* FORM STYLES */
+.contact form{
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-gap:0px;
+
+}
+
+.contact form label{
+  display:block;
+}
+
+.contact form p{
+  margin:0;
+}
+
+.contact form .full{
+  grid-column: 1 /3;
+}
+
+.contact form button, .contact form input, .contact form textarea{
+  width:100%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.contact form button{
+  background:#ffb300;
+  border:0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,.contact form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:1;
+  transition: background-color 2s ease-out;
+}
+
+.alert{
+  text-align: center;
+  padding:10px;
+  background:#79c879;
+  color:#fff;
+  margin-bottom:10px;
+  display:none;
+}
+
+/* LARGE SCREENS */
+
+
+  
+  .company-info h3, .company-info ul, .brand{
+    text-align: center;
+  }
+}
+img{
+width:350px;
+
+ height:350px;
+}
+
+</style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<body style="background-image:url(/images/ZlgULi.jpg)"></body>
+<div class="container">
+  <div class="contact">
+    <div class="row">
+
+ <div class="col-sm-10">
+
+      <h3>Interested ! Register Now</h3>
+    
+      <form action="/register" method="POST" enctype="multipart/form-data">
+ <div class="form-row">
+   <div class="col">
+          <label>Name</label>
+          <input type="text" name="name" id="name" placeholder=" Full Name" required>
+      </div>    <div class="col">
+          <label>Resume Headline</label>
+          <input type="text" name="headline" id="headline" placeholder="B. TECH, MBA with Live Project Experiance" required>
+      </div>  </div>
+      <br>
+        <div class="form-row">
+     <div class="col">
+          <label>Experiance</label>
+          <input type="text" name="age" id="age" placeholder="Fresher or 2 years, 5 years..." required>
+  
+         </div>
+          <div class="col">
+          <label>Key Skills</label>
+          <input type="text" name="skills" id="skills" placeholder="java, python, salesforce, aws ...." required>
+  
+         </div>
+         </div>
+        <br>
+       
+     <div class="form-row">
+     <div class="col">
+          <label>Email Address</label>
+          <input type="email" name="email" id="email" required>
+      
+ </div>
+    <div class="col">
+          <label>Projects</label>
+          <input type="text" name="projects" placeholder="Java live projects" id="projects" required>
+      
+ </div>
+  </div>
+ <br>
+ 
+        <div class="form-row">
+     <div class="col">
+
+       
+          <label>Password</label>
+          <input type="password" name="password" id="password" required>
+      
+ </div>
+
+   <div class="col">
+
+               <label>Current Salary</label>
+       <select id="{{employee.salary}}" name ="salary" required style='height: 42px; position: relative; color:white; font-family:Arial, FontAwesome; width:200px; background-color: DodgerBlue; font-size: 14px'>
+               <option value='{{employee.salary}}'  style='color:white;'>&#xf039; &nbsp;{{employee.salary}} </option>
+                <option value='Fresher' name ="Fresher" style='color:white;'>&#xf00c; &nbsp; Fresher </option>
+       
+          <option value='2lakh-4lakh' name ="2lakh-4lakh" style='color:white;'>&#xf00c; &nbsp; 1lakh-4lakh </option>
+          <option value='3lakh-5lakh'  name ="3lakh-5lakh" {{employee.salary}}        style='color:white;'>&#xf04c; &nbsp; 3lakh-6lakh </option>
+          <option value='6lakh-10lakh' name ="6lakh-10lakh" value="{{employee.salary}}" style='color:white;'>&#xf023; &nbsp; 6lakh-10lakh </option>
+  </select>
+      
+ </div>
+  </div>
+ <br>
+
+    <div class="form-row">
+   <div class="col">
+
+       
+          <label>Confirm Password</label>
+          <input type="password" name="confirmpassword" id="confirmpassword" required>
+      
+ </div>
+    <div class="col">
+
+               <label>Expected Salary</label>
+       <select id="{{employee.esalary}}"  name ="esalary" required style='height: 42px; position: relative; color:white; font-family:Arial, FontAwesome; width:200px; background-color: DodgerBlue; font-size: 14px'>
+       <option value='{{employee.esalary}}'  style='color:white;'>&#xf039; &nbsp;{{employee.esalary}} </option>
+          
+          <option value='2lakh-4lakh' name ="2lakh-4lakh" style='color:white;'>&#xf00c; &nbsp; 2lakh-4lakh </option>
+          <option value='3lakh-5lakh'  name ="3lakh-5lakh" {{employee.esalary}}        style='color:white;'>&#xf04c; &nbsp; 3lakh-6lakh </option>
+          <option value='6lakh-10lakh' name ="6lakh-10lakh" value="{{employee.esalary}}" style='color:white;'>&#xf023; &nbsp; 6lakh-10lakh </option>
+          <option value='10lakh-15lakh' name ="6lakh-10lakh" value="{{employee.esalary}}" style='color:white;'>&#xf023; &nbsp; 10lakh-15lakh </option>
+  </select>
+      
+ </div>
+  </div>
+ <br>
+    <div class="form-row">
+   <div class="col">
+
+       
+          <label>Phone Number</label>
+          <input type="text" name="phone" id="phone" required>
+</div>
+  <div class="col">
+
+               <label>City</label>
+       <select id="{{employee.personal}}"  name ="personal" required style='height: 42px; position: relative; color:white; font-family:Arial, FontAwesome; width:200px; background-color: DodgerBlue; font-size: 14px'>
+          <option value='{{employee.personal}}'  style='color:white;'>&#xf039; &nbsp;{{employee.personal}} </option>
+          
+          <option value='Gurgaon' name ="Gurgaon" style='color:white;'>&#xf00c; &nbsp; Gurgaon </option>
+          <option value='Delhi'  name ="Delhi" {{employee.personal}}        style='color:white;'>&#xf04c; &nbsp; Delhi</option>
+          <option value='Noida' name ="Noida" value="{{employee.personal}}" style='color:white;'>&#xf023; &nbsp; Noida </option>
+          <option value='faridabad' name ="faridabad" value="{{employee.personal}}" style='color:white;'>&#xf023; &nbsp; Faridabad </option>
+          <option value='Rohtak' name ="Rohtak" value="{{employee.personal}}" style='color:white;'>&#xf023; &nbsp; Rohtak </option>
+            <option value='Jind' name ="Jind" value="{{employee.personal}}" style='color:white;'>&#xf023; &nbsp; Jind </option>
+             <option value='Riwari' name ="Riwari" value="{{employee.personal}}" style='color:white;'>&#xf023; &nbsp; Riwari </option>
+         <option value='Bhiwani' name ="Bhiwani" value="{{employee.personal}}" style='color:white;'>&#xf023; &nbsp; Bhiwani </option>
+           <option value='Chandigarh' name ="Chandigarh" value="{{employee.personal}}" style='color:white;'>&#xf023; &nbsp; Chandigarh </option>
+  </select>
+      
+ </div>
+
+</div>
+
+  <br>
+
+         <div class="form-group">
+<lable for="image">Upload Resume</lable>
+<input type="file" name="image" id="image" class="form-control-file">
+    </div>
+      
+     
+     </div>
+          </div>
+          <br>
+  
+       <button type="submit">Submit</button>
+        <br/>   <br/>
+      </form>
+    </div>
+</div></div>
+</div>
+</body>

@@ -1,0 +1,312 @@
+   <style>
+      @media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  body, .container, .right {
+    width: 100%;
+  }
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: DodgerBlue;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 100px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+p{
+    color: rgb(5, 5, 5);
+
+
+}
+
+
+
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+
+  background-repeat: no-repeat;
+    background-size: cover;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  margin-left:2px;
+  font-size: 16px;
+
+
+}
+h3{
+text-align: center;
+}
+.container{
+  max-width:1045px;
+  
+
+  
+display:block;
+
+}
+
+
+.brand{
+  text-align: center;
+}
+
+.brand span{
+  color:#fff;
+}
+
+
+
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:5px;
+}
+
+.contact{
+  
+}
+
+/* FORM STYLES */
+.contact form{
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  grid-gap:0px;
+
+}
+
+.contact form label{
+  display:block;
+}
+
+.contact form p{
+  margin:0;
+}
+
+.contact form .full{
+  grid-column: 1 /3;
+}
+
+.contact form button, .contact form input, .contact form textarea{
+  width:100%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.contact form button{
+  background:#ffb300;
+  border:0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,.contact form button:focus{
+  background:#92bde7;
+  color:#fff;
+  outline:1;
+  transition: background-color 2s ease-out;
+}
+
+.alert{
+  text-align: center;
+  padding:10px;
+  background:#79c879;
+  color:#fff;
+  margin-bottom:10px;
+  display:none;
+}
+
+/* LARGE SCREENS */
+
+
+  
+  .company-info h3, .company-info ul, .brand{
+    text-align: center;
+  }
+}
+img{
+width:350px;
+
+ height:350px;
+}
+
+</style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<body style="background-image:url(/images/ZlgULi.jpg)">  <br/>
+</body>
+<div class="container">
+  <div class="contact">
+    <div class="row">
+
+ <div class="col-sm-10">
+
+      <h3>Employer Registration</h3>
+    <br/>
+      <form action="/employerdetails" method="POST" enctype="multipart/form-data">
+ <div class="form-row">
+   <div class="col">
+          <label>Name</label>
+          <input type="text" name="name" id="name" required>
+      </div>    <div class="col">
+          <label>Hiring technology</label>
+          <input type="text" name="technology" id="headline" required>
+      </div>  </div>
+      <br>
+        <div class="form-row">
+     <div class="col">
+          <label>Company</label>
+          <input type="text" name="company" id="company" required>
+  
+         </div>
+          <div class="col">
+          <label>Key Skills</label>
+          <input type="text" name="skills" id="skills" required>
+  
+         </div>
+         </div>
+        <br>
+       
+     <div class="form-row">
+     <div class="col">
+          <label>Email Address</label>
+          <input type="email" name="email" id="email" required>
+      
+ </div>
+    <div class="col">
+          <label>Company Pan No.</label>
+          <input type="text" name="projects" id="projects" required>
+      
+ </div>
+  </div>
+ <br>
+ 
+        <div class="form-row">
+     <div class="col">
+
+       
+          <label>Password</label>
+          <input type="password" name="password" id="password" required>
+      
+ </div>
+
+    <div class="col">
+
+       
+          <label>Confirm Password</label>
+          <input type="password" name="confirmpassword" id="confirmpassword" required>
+      
+ </div>
+  </div>
+ <br>
+
+
+
+
+
+
+
+ <br>
+    <div class="form-row">
+   <div class="col">
+
+       
+          <label>Phone Number</label>
+          <input type="text" name="phone" id="phone" required>
+</div>
+   <div class="col">
+
+       
+          <label>Company Address</label>
+          <input type="text" name="personal" id="personal" required>
+</div>
+
+</div>
+
+  <br>
+
+         <div class="form-group">
+<lable for="image">Upload Company Logo</lable>
+<input type="file" name="image" id="image" class="form-control-file">
+    </div>
+      
+     
+     </div>
+          </div>
+        
+  
+       <button type="submit">Submit</button>
+        <br/> 
+      </form>
+    </div>
+</div>
+<br/>
+<br/>
+<br/><br/>
+</body>
