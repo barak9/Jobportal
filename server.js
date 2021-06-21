@@ -18,7 +18,7 @@ app.use(bodyparser.urlencoded({
     extended: true
 }));
 app.use(bodyparser.json());
-app.set('views', path.join(__dirname, '/views/'));
+app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layouts/' }));
 app.set('view engine', 'hbs');
 const TWO_HOURS = 1000*60*60
@@ -54,3 +54,8 @@ app.use('/singlelist', employeeController);
 app.use('/res', employeeController);
 app.use('/resume', employeeController);
 app.use('/uploads', express.static('uploads'));
+
+
+
+
+
