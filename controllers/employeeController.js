@@ -25,7 +25,7 @@ const redirectlogin = (req, res, next)=>{
 }
 const redirectdata = (req, res, next)=>{
     if(!req.session.useremail){
-        res.redirect('/employerlogin')
+        res.redirect('/secret')
     }else{
         next()
     }
@@ -131,7 +131,7 @@ router.post("/employerlogin", async(req, res) =>{
         if(useremail){
             req.session.useremail= useremail.email
             if(useremail.password === password){
-                return res.redirect("employee/res") 
+                res.status(201).redirect('/employee/res') 
                 console.log(error);
         
         
@@ -397,18 +397,18 @@ console.log(error);
                         <p class="card-text">
                         <div class="row">
                         <div class="col-lg-6">
-                        <h6 class="card-title" style="color:#ffffff";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-laptop-code"></i>&nbsp&nbsp&nbsp&nbsp&nbsp${useremail.skills}</h6>
+                        <h6 class="card-title" style="color:#ffffff";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="/images/lapi.png" style="color:#ffffff"; width="22" height="20" style="margin-bottom:5px;"/>&nbsp&nbsp&nbsp&nbsp&nbsp${useremail.skills}</h6>
                         </div>
                         <div class="col-lg-6">
                         
-                        <h6 class="card-title" style="color:#ffffff";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-mobile-alt"></i>&nbsp&nbsp&nbsp&nbsp&nbsp${useremail.phone}</p></h6>
+                        <h6 class="card-title" style="color:#ffffff";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="/images/mobile.jpg" style="color:#ffffff"; width="22" height="20" style="margin-bottom:5px;"/></i>&nbsp&nbsp&nbsp&nbsp&nbsp${useremail.phone}</p></h6>
                         </div>
                         <div class="col-lg-6">
-                        <h6 class="card-title" style="color:#ffffff";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-briefcase"></i>&nbsp&nbsp&nbsp&nbsp&nbsp${useremail.age}</h6>
+                        <h6 class="card-title" style="color:#ffffff";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="/images/brief.jpg" style="color:#ffffff"; width="22" height="20" style="margin-bottom:5px;"/>&nbsp&nbsp&nbsp&nbsp&nbsp${useremail.age}</h6>
                         </div>
                         <div class="col-lg-6">
                         
-                        <h6 class="card-title" style="color:#ffffff";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="far fa-envelope"></i>&nbsp&nbsp&nbsp&nbsp&nbsp${useremail.email}</h6>
+                        <h6 class="card-title" style="color:#ffffff";>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="/images/email.jpg" style="color:#ffffff"; width="22" height="20" style="margin-bottom:5px;"/>&nbsp&nbsp&nbsp&nbsp&nbsp${useremail.email}</h6>
                         </div>
                         <div class="col-lg-1"></div>
                         <div class="col-lg-5">

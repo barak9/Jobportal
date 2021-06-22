@@ -54,6 +54,7 @@ app.use('/list', employeeController);
 app.use('/employee', employeeController);
 app.use('/singlelist', employeeController);
 app.use('/res', employeeController);
+app.use('/employee/res', employeeController);
 app.use('/resume', employeeController);
 app.use('/uploads', express.static('uploads'));
 
