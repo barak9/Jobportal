@@ -1020,7 +1020,7 @@ router.get('/resumesearch', (req, res) => {
 
 
 
-router.get('/resumesearch', redirectdata,(req,res)=>{
+router.get('/resumesearch',(req,res)=>{
    
     res.render("employee/resume",{
         viewTitle: "resume Page"
@@ -1338,7 +1338,7 @@ router.get('/', (req,res,a)=>{
 });
 
 
-router.get('/res', (req, res) => {
+router.get('/res', redirectlogin, (req, res) => {
   
     if (req.query.search) {
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
