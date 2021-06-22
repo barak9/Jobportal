@@ -966,7 +966,7 @@ router.get('/singlelist', (req,res)=>{
     });
 });
 
-router.get('/resumesearch', redirectdata,(req, res) => {
+router.get('/resumesearch', (req, res) => {
   
     if (req.query.search) {
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
