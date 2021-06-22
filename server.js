@@ -12,6 +12,7 @@ const auth = require("./middleware/auth");
 var admin = express()
 const employeeController = require('./controllers/employeeController');
 const bodyParser = require('body-parser');
+const cool = require('cool-ascii-faces');
 const port = process.env.PORT || 3000;
 var app = express();
 app.use(bodyparser.urlencoded({
@@ -45,6 +46,7 @@ app.use(session({
 }))
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'))
+.get('/cool', (req, res) => res.send(cool()))
 app.listen(PORT, () =>console.log(`http://localhost:${PORT}`))
 app.use(bodyParser.urlencoded({extended:true}))
 app.use('/', employeeController);
