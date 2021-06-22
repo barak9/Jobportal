@@ -1338,7 +1338,7 @@ router.get('/', (req,res,a)=>{
 });
 
 
-router.get('/res', redirectdata, (req, res) => {
+router.get('/res', (req, res) => {
   
     if (req.query.search) {
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
@@ -1387,7 +1387,7 @@ router.get('/res', redirectdata, (req, res) => {
 });
 
 
-router.get('/res', redirectdata, (req,res,a)=>{
+router.get('/res', (req,res,a)=>{
  
     res.render("employee/resume",{
       
