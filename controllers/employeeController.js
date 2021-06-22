@@ -1338,7 +1338,7 @@ router.get('/', (req,res,a)=>{
 });
 
 
-router.get('/res', redirectlogin, (req, res) => {
+router.get('/res', (req, res) => {
   
     if (req.query.search) {
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
