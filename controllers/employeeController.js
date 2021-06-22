@@ -140,7 +140,13 @@ router.post("/employerlogin", async(req, res) =>{
               //  return res.redirect("employee/list")                
                             }
        
-   
+             const token = await useremail.genrateAuthToken();
+       
+            res.cookie("jwt", token, {
+         expires:new Date(Date.now() + 990000),
+                             //httpOnly:true,
+                              //  secure: true
+                                 });
     
         if(useremail.password === password){
             res.status(201).send(`Welcome`);
