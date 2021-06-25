@@ -16,11 +16,16 @@ label {
   position: absolute;
   right: 0;
 }
+
+
+.navbar-nav{
+  margin-left: 400px;
+}
+
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/singlelist">
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+<a class="navbar-brand" href="/singlelist">
       <img
         src="/images/login.png"
         height="50"
@@ -28,62 +33,64 @@ label {
         loading="lazy"
       />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Jobs</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   <ul class="navbar-nav mr-auto">
+	
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">Recuriters</a>
-        <a class="nav-link" href="#">Services</a>
-        <a class="nav-link" href="#">About</a
-        >
-      <!-- Left links -->
-    
-      <div style="margin-left:220px;"></div>
-        <a class="btn btn-secondary" href="/addOrEdit"><i class="fa fa-plus"></i> Create New JOB</a> 
- 
- 
-        <a
-          class="btn px-3"
-          href=""
-          role="button"
-          > <i class="fas fa-bell"></i>
-         </a>
-    </div>
-
-    </div>
-      <div style="margin-left:40px;"></div>
-<div class="dropdown">
-  <button class="dropbtn">Login</button>
-  <div class="dropdown-content">
-    <a href="/login">Candidate Login</a>
-    <a href="/employerlogin">Employer Login</a>
-  
-  </div>
-</div>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<div class="dropdown">
-  <button class="dropbtn">Sign Up</button>
-  <div class="dropdown-content">
-    <a href="/register">Candidate SignUp</a>
-    <a href="/employerdetails">Employer SignUp</a>
+      </li>
    
-  </div>
-</div>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+	 
+	  <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
 
-<div style="margin-left:50px;"></div>
-    <!-- Collapsible wrapper -->
+	  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign Up
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/register">Upload Resume</a>
+          <a class="dropdown-item" href="/employerdetails">Employer SignUp</a>
+        
+        </div>
+      </li>
+	
+	
+	
+	
+	
+	
+	
+	<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/login">Candidate Login</a>
+          <a class="dropdown-item" href="/employerlogin">Employer Login</a>
+          
+        </div>
+      </li>
+	
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<h3><a class="btn btn-secondary" href="/addOrEdit"><i class="fa fa-plus"></i> Post New Job</a></h3>
+	
+	
+	
+	</ul>
+
   </div>
-  <!-- Container wrapper -->
 </nav>
 
 <!-- Section: Condition -->
