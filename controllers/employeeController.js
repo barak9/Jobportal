@@ -1194,7 +1194,7 @@ body{
 }
 
 
-router.get('/list', redirectlogin, (req, res) => {
+router.get('/list', (req, res) => {
     Employee.find((err, docs) => {
         if (!err) {
             { sort: { _id: -1 } }
